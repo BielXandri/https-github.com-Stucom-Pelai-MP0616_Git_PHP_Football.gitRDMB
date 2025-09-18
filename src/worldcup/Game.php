@@ -3,7 +3,6 @@ namespace WorldCup;
 
 use DateTime;
 
-// Importar todas las clases
 require_once __DIR__ . '/Ball.php';
 require_once __DIR__ . '/Person.php';
 require_once __DIR__ . '/Player.php';
@@ -14,10 +13,6 @@ require_once __DIR__ . '/Goalkeeper.php';
 require_once __DIR__ . '/Coach.php';
 require_once __DIR__ . '/Team.php';
 require_once __DIR__ . '/Field.php';
-
-// Ejecutar juego
-$game = new Game();
-$game->main();
 
 class Game {
     public $field;
@@ -35,8 +30,8 @@ class Game {
     public function setTeams($teams) { $this->teams = $teams; }
 
     public function main() {
-        echo "\nStarting application\n";
-        
+        echo "<pre>";
+        echo "Starting application\n";
         
         $this->setField(new Field(100));
         $this->setDate(new DateTime());
@@ -61,14 +56,14 @@ class Game {
         $this->setTeams([$teamA, $teamB]);
 
         $this->start();
+        echo "</pre>";
     }
 
     public function start() {
-        echo "starting match actions... \n";
-        echo"  ";
+        echo "starting match actions...\n\n";
 
         for ($i = 0; $i < 10; $i++) {
-            echo "\n--- Action \n" . ($i + 1) . " ---\n";
+            echo "--- Action " . ($i + 1) . " ---\n";
 
             $teamIndex = array_rand($this->teams);
             $selectedTeam = $this->teams[$teamIndex];
@@ -92,6 +87,24 @@ class Game {
             } elseif ($selectedPlayer instanceof Goalkeeper) {
                 $selectedPlayer->block($this->getBall());
             }
+
+            echo "\n";
         }
     }
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Match Result</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<?php
+$game = new Game();
+$game->main();
+?>
+</body>
+</html>
