@@ -28,7 +28,7 @@ class Game {
     public function getField() { return $this->field; }
     public function setField($field) { $this->field = $field; }
     public function getDate() { return $this->date; }
-    public function setDate($date) { $this->date = $date; }
+    blic function setDate($date) { $this->date = $date; }
     public function getBall() { return $this->ball; }
     public function setBall($ball) { $this->ball = $ball; }
     public function getTeams() { return $this->teams; }

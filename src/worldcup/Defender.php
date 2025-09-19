@@ -15,6 +15,6 @@ class Defender extends Player {
     }
 
     public function setMark($mark) {
-        $this->mark = $mark;
+        $this->mk = $mark;
     }
 }
