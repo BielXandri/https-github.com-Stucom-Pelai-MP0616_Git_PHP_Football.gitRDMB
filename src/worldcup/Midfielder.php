@@ -2,27 +2,25 @@
 
 namespace WorldCup;
 
-/**
- * Class to define the midfielder
- */
+// Creamos la clase Midfielder, que hereda de Player
+// Representa al centrocampista, que organiza el juego y conecta defensa y ataque
 class Midfielder extends Player {
+    // Propiedad que indica la "visión" del jugador: su capacidad para organizar jugadas
     private $vision;
 
-    /**
-     * Get the vision
-     */
+    // Getter para consultar la visión del centrocampista
     public function isVision() {
         return $this->vision;
     }
 
-    /**
-     * Set the vision
-     */
+    // Setter para asignar la visión del centrocampista
     public function setVision($vision) {
         $this->vision = $vision;
     }
 
+    // Método que simula que el centrocampista organiza el juego
     public function organize() {
-        echo "organizing\n"; // En PHP no existe print1n, así que uso echo para que funcione.
+        // Imprimimos un mensaje para mostrar la acción
+        echo "organizing\n";
     }
 }

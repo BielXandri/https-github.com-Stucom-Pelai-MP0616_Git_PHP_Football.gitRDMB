@@ -2,14 +2,24 @@
 <html lang="en">
 
 <head>
+  // Definimos la codificación de caracteres del documento
   <meta charset="UTF-8">
+
+  // Título que aparece en la pestaña del navegador
   <title>World Cup Simulator</title>
+
+  // Enlazamos la hoja de estilos externa para darle diseño y colores a la página
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  // Título principal que ve el usuario en la página
   <h1>Welcome to World Cup Simulator</h1>
+
+  // Formulario para iniciar el partido
+  // Al pulsar el botón se envía una petición POST a game.php
   <form action="game.php" method="post">
+    // Botón que inicia el partido
     <button type="submit">Start Match</button>
   </form>
 </body>

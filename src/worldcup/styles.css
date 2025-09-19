@@ -1,5 +1,7 @@
+/* Importamos la fuente Orbitron desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+/* Variables de colores del proyecto */
 :root {
   --negro: #000000;
   --blanco: #ffffff;
@@ -8,6 +10,7 @@
   --gris-claro: #d3d3d3;
 }
 
+/* Estilos generales del body */
 body {
   font-size: 16px;
   font-family: Orbitron, 'Courier New', Courier, monospace;
@@ -20,6 +23,7 @@ body {
   align-items: center;
 }
 
+/* Estilo del título principal */
 h1 {
   color: var(--violeta);
   text-align: center;
@@ -28,10 +32,12 @@ h1 {
   text-shadow: 0 0 8px var(--violeta);
 }
 
+/* Estilo del formulario */
 form {
   margin-top: 1rem;
 }
 
+/* Estilo de los botones */
 button {
   font-size: 16px;
   font-family: Orbitron, 'Courier New', Courier, monospace;
@@ -44,12 +50,14 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Efecto hover de los botones */
 button:hover {
   background-color: var(--gris-claro);
   color: var(--negro);
   transform: scale(1.05);
 }
 
+/* Estilo de los bloques preformateados (pre) */
 pre {
   background-color: var(--negro);
   color: var(--gris-claro);

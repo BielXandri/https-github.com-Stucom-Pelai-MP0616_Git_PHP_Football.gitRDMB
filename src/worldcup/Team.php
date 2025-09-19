@@ -2,64 +2,53 @@
 
 namespace WorldCup;
 
-/**
- * Class to define the team
- */
+// Clase Team: representa un equipo con nombre, entrenador y jugadores
 class Team {
     public $name;
     public $coach;
-    public $players; // array of Player objects
+    public $players; // array de objetos Player
 
+    // Constructor: inicializa el equipo con un nombre
     public function __construct($name) {
         $this->name = $name;
     }
 
+    // Método que simula que el equipo juega
     public function play() {
         echo "playing\n";
     }
 
+    // Método que simula que el equipo ataca
     public function attack() {
         echo "attacking\n";
     }
 
-    /**
-     * Get the name
-     */
+    // Getter del nombre del equipo
     public function getName() {
         return $this->name;
     }
 
-    /**
-     * Set the name
-     */
+    // Setter del nombre del equipo
     public function setName($name) {
         $this->name = $name;
     }
 
-    /**
-     * Set the coach
-     */
+    // Getter del entrenador
     public function getCoach() {
         return $this->coach;
     }
 
-    /**
-     * Get the coach
-     */
+    // Setter del entrenador
     public function setCoach($coach) {
         $this->coach = $coach;
     }
 
-    /**
-     * Get the players
-     */
+    // Getter de los jugadores
     public function getPlayers() {
         return $this->players;
     }
 
-    /**
-     * Set the players
-     */
+    // Setter de los jugadores
     public function setPlayers($players) {
         $this->players = $players;
     }
