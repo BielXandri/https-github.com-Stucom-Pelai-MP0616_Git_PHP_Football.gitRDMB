@@ -22,7 +22,8 @@ class Field {
         $this->size = $size;
     }
 
-    Public function light() {
-        Echo "switching the lights\n";
+    public function light() {
+        echo "switching the lights\n";
+    }
     
 }
