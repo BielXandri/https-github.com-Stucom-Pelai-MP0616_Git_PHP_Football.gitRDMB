@@ -13,6 +13,6 @@ class Coach extends Person {
     }
 
     public function setStyle($style) {
-        $this->style = $style;
+        $ths->style = $style;
     }
 }
